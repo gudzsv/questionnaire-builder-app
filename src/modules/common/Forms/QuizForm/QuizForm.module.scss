@@ -1,0 +1,58 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 2rem;
+	border: 1px solid $silver-color;
+	margin: 2rem;
+
+	em {
+		width: 1rem;
+	}
+}
+
+.titleWrapper {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.label {
+	display: block;
+	font-weight: bold;
+}
+
+.input {
+	display: block;
+	width: 100%;
+}
+
+.questionWrapper {
+	border: 1px solid $silver-color;
+	padding: 2rem;
+}
+
+.flexWrap {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 2rem;
+}
+.inputWrapper {
+	width: 100%;
+}
+
+.answersWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 1rem;
+}
+
+.error {
+	color: $tomato-color;
+}
+
+.success {
+	color: $green-color;
+}

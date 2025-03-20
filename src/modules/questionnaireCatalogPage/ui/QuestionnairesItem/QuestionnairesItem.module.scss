@@ -1,0 +1,19 @@
+.cardItem {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 1rem;
+	border: 1px solid silver;
+}
+
+.titleContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 200px;
+}
+
+.questionCountContainer {
+	display: flex;
+	gap: 8px;
+}

@@ -12,7 +12,7 @@ async function fetchAllQuestionnaires(page, perPage) {
 	return data;
 }
 
-export default async function Home({ searchParams }) {
+export default async function CatalogPage({ searchParams }) {
 	const params = await searchParams;
 	const page = parseInt(params?.page ?? '1', 10);
 	const perPage = 3;
