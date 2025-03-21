@@ -17,3 +17,16 @@
 	display: flex;
 	gap: 8px;
 }
+
+.listWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.btnLink {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}

@@ -7,7 +7,6 @@ function QuestionnairesList({ data }) {
 			{data.map((quiz) => (
 				<QuestionnairesItem key={quiz._id} quiz={quiz} />
 			))}
-			<p>{data.length}</p>
 		</ul>
 	);
 }

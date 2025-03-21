@@ -4,6 +4,7 @@ import {
 	getQuestionnaireById,
 	updateQuestionnaire,
 } from '@/services/questionnaireService.js';
+import { revalidatePath } from 'next/cache.js';
 
 export async function GET(req, { params }) {
 	try {
@@ -70,7 +71,7 @@ export async function DELETE(req, { params }) {
 				status: 404,
 			});
 		}
-
+		revalidatePath('/catalog');
 		return createApiResponse({
 			message: 'Questionnaire deleted successfully',
 			status: 200,

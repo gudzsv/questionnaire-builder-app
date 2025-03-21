@@ -1,10 +1,8 @@
-function Statistic() {
+export default function Interactive() {
 	return (
 		<>
-			<h1>Statistic Page</h1>
+			<h1>Interactive Quiz pzge</h1>
 			<p style={{ textAlign: 'center' }}>Will be implemented in the future</p>
 		</>
 	);
 }
-
-export default Statistic;

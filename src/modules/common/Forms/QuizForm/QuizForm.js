@@ -17,10 +17,6 @@ const initialData = [
 const initialState = { success: false, error: null, savedData: initialData };
 
 export default function QuizForm({ data }) {
-	// const formActionHandler = !data
-	// 	? createQuizAction
-	// 	: (formData) => updateQuizAction(data._id, formData);
-
 	const [formData, formAction, pending] = useActionState(
 		createQuizAction,
 		initialState
@@ -35,7 +31,6 @@ export default function QuizForm({ data }) {
 	const router = useRouter();
 
 	useEffect(() => {
-		console.log('formData.success: ', formData.success);
 		if (formData.success && !pending) {
 			router.push(APP_ROUTES.catalog);
 		}
@@ -182,9 +177,9 @@ export default function QuizForm({ data }) {
 								className='border p-1'
 								name={`type-${qIndex}`}
 							>
-								<option value='text'>Текст</option>
-								<option value='single'>Один варіант</option>
-								<option value='multiple'>Кілька варіантів</option>
+								<option value='text'>text</option>
+								<option value='single'>single choice</option>
+								<option value='multiple'>multiple choices</option>
 							</select>
 						</div>
 					</div>

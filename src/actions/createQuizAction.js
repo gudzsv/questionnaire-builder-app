@@ -4,7 +4,6 @@ import connectToDatabase from '@/lib/db/connect.js';
 import Questionnaire from '@/lib/db/models/Questionnaire.js';
 
 export async function createQuizAction(prevState, formData) {
-	console.log('formData: ', formData);
 	try {
 		const id = formData.get('id');
 		const quizName = formData.get('quizName');
@@ -51,7 +50,6 @@ export async function createQuizAction(prevState, formData) {
 			if (!id) {
 				const newQuestionnaire = new Questionnaire(data);
 				await newQuestionnaire.save();
-				console.log('newQuestionnaire: ', newQuestionnaire);
 			} else {
 				const updatedQuiz = await Questionnaire.findByIdAndUpdate(
 					id,
@@ -70,7 +68,6 @@ export async function createQuizAction(prevState, formData) {
 			savedData: data,
 		};
 	} catch (error) {
-		console.error('Error in quiz save process: ' + error);
 		return { success: false, error: 'Error in quiz save process' + error };
 	}
 }

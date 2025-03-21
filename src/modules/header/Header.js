@@ -2,7 +2,7 @@ import { APP_ROUTES } from '@/constants/index.js';
 import Link from 'next/link.js';
 import s from './Header.module.scss';
 
-const { home, catalog, builder } = APP_ROUTES;
+const { home, catalog, builder, statistics } = APP_ROUTES;
 
 export default function Header() {
 	return (
@@ -17,6 +17,9 @@ export default function Header() {
 					</li>
 					<li>
 						<Link href={builder}>Builder</Link>
+					</li>
+					<li>
+						<Link href={statistics}>Statistics</Link>
 					</li>
 				</ul>
 			</nav>

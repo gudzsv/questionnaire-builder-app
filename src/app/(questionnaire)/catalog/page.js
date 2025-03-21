@@ -1,3 +1,4 @@
+import { PAGINATION } from '@/constants/index.js';
 import Pagination from '@/modules/questionnaireCatalogPage/ui/Pagination/Pagination.js';
 import QuestionnairesList from '@/modules/questionnaireCatalogPage/ui/QuestionnairesList/QuestionnairesList.js';
 
@@ -14,8 +15,8 @@ async function fetchAllQuestionnaires(page, perPage) {
 
 export default async function CatalogPage({ searchParams }) {
 	const params = await searchParams;
-	const page = parseInt(params?.page ?? '1', 10);
-	const perPage = 3;
+	const page = parseInt(params?.page ?? PAGINATION.page);
+	const perPage = PAGINATION.perPage;
 	const { questionnaires, pagination } = await fetchAllQuestionnaires(
 		page,
 		perPage
