@@ -20,6 +20,21 @@ export default function InteractiveQuiz({ quiz }) {
 		setIsTimerRunning(false);
 		startTransition(() => {
 			const formDataToSubmit = new FormData(e.target);
+
+			const answeredQuestions = new Set();
+
+			for (const [key, value] of formDataToSubmit.entries()) {
+				if (key !== 'allQuestions' && value.trim() !== '') {
+					answeredQuestions.add(key);
+				}
+			}
+
+			if (answeredQuestions.size < quiz.questions.length) {
+				alert('Please answer all the questions before submitting.');
+				setIsTimerRunning(true);
+				return;
+			}
+
 			formAction(formDataToSubmit);
 		});
 	};
