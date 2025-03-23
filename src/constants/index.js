@@ -10,3 +10,9 @@ export const PAGINATION = {
 	page: 1,
 	perPage: 4,
 };
+
+export const QUESTION_TYPES = {
+	text: 'text',
+	single: 'single',
+	multiple: 'multiple',
+};

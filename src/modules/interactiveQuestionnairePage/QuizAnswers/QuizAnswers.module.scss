@@ -1,0 +1,19 @@
+.quizAnswersList {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1rem;
+	padding-left: 2rem;
+}
+
+.inputWrapper {
+	& > input {
+		display: inline-block;
+		margin-right: 8px;
+	}
+
+	& > label {
+		display: inline-block;
+	}
+}

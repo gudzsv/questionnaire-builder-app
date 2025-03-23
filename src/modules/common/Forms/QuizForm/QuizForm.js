@@ -1,6 +1,6 @@
 'use client';
 
-import { createQuizAction } from '@/actions/createQuizAction.js';
+import { createQuizAction } from '@/actions/createQuiz.js';
 import { APP_ROUTES } from '@/constants/index.js';
 import { useRouter } from 'next/navigation';
 import { useActionState, useEffect, useState } from 'react';
