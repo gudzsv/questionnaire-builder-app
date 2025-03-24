@@ -7,19 +7,15 @@ export default function Pagination({ page, totalPages }) {
 
 	return (
 		<div className={s.pagination}>
-			{prevPage && (
-				<Link href={`?page=${prevPage}`} passHref>
-					<button>Previous</button>
-				</Link>
-			)}
+			<Link href={`?page=${prevPage}`}>
+				<button disabled={nextPage}>Previous</button>
+			</Link>
 			<span>
 				{page} / {totalPages}
 			</span>
-			{nextPage && (
-				<Link href={`?page=${nextPage}`} passHref>
-					<button>Next</button>
-				</Link>
-			)}
+			<Link href={`?page=${nextPage}`}>
+				<button disabled={prevPage}>Next</button>
+			</Link>
 		</div>
 	);
 }
